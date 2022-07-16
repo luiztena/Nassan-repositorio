@@ -1,0 +1,101 @@
+/*Gerais*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.row {
+    margin: 0;
+}
+
+.container{
+    padding: 70px 0;
+}
+
+p, li {
+    color: #444;
+    font-size: 14px;
+}
+
+/* Barra de navegação*/
+#menulink{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 50px;
+    text-align: center;
+
+}
+#menulink:hover{
+    text-decoration: underline;
+}
+img#logo{
+
+    border-style: solid;
+    border-radius: 100%;
+    border-color: rgba(0, 0, 0, 0.63);
+    background-color: rgb(233, 186, 34);
+    border-width: 4px;
+    height: 65px;
+    width: 65px;
+    
+    
+}
+
+#ul {
+    border-left-style:  outset;
+    border-left-color: rgb(233, 186, 34);
+    border-left-width: 3px;
+    transition: 2s;
+    padding-right: 50px;
+}
+
+
+#nassanlogo{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* Slider */
+
+
+
+#carouselExampleIndicators .carousel-inner, .carousel-item{
+    height: 70vh;
+
+}
+
+#tituloslide{
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+#subtituloslide{
+    text-align: center;
+    color: white;
+    font-size: 12pt;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    text-transform: uppercase;
+    
+}
+
+#slidelink {
+    font-size: 14pt;
+    text-align: center;
+    text-decoration: none;
+    color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: .5s;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#slidelink:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-caption{
+    top: 30%;
+}
