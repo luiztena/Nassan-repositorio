@@ -121,3 +121,20 @@ img#logo{
     background-color: rgba(0, 0, 0);
     color: yellow;
 }
+
+/**Cabeçalho**/
+#footericon:hover{
+ background-color: yellow   
+}
+#footertext{
+    color: white;
+    font-size: 16pt;
+}
+
+/**Section**/ 
+div#section{
+    background-image: url("img/section1.jpg");
+    border-bottom-style: inset;
+    border-bottom-color: black;
+    border-bottom-width: 3px;
+}
