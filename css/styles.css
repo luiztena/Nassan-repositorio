@@ -121,6 +121,9 @@ img#logo{
     background-color: rgba(0, 0, 0);
     color: yellow;
 }
+#myCarousel{
+    margin-bottom: 250px;
+}
 
 /**Cabeçalho**/
 #footericon:hover{
@@ -132,9 +135,46 @@ img#logo{
 }
 
 /**Section**/ 
-div#section{
-    background-image: url("img/section1.jpg");
-    border-bottom-style: inset;
-    border-bottom-color: black;
-    border-bottom-width: 3px;
+#section1{
+    border-style: outset;
+    box-shadow: 5px 2px 25px rgba(0, 0, 0, 0.5);
+    margin-bottom: 300px;
+}
+#sectionconteudo h1{
+    text-align: center;
+}
+#sectionconteudo p{
+    text-align: justify;
+    font-weight: 500;
+}
+
+#sectionbutton{
+padding: 10px 20px;
+border-style: solid;
+border-color: rgba(0, 0, 0, 0.5);
+border-width: 2px;
+text-transform: uppercase;
+}
+
+#sectionbutton:hover{
+    box-shadow: 1px 1px 30px rgb(255, 217, 3)
+}
+
+#section2img{
+    width: 200px;
+    height: 300px;
+    display: block;
+    margin-left: 120px;
+}
+#section1img{
+    margin-left: 40px;
+    display: block;
+    width: 500px;
+    height: 300px;
+}
+#section3#img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: 80px;
 }
