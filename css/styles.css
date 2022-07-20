@@ -217,3 +217,38 @@ text-transform: uppercase;
 #buttonlink{
     color: black;
     text-decoration: none;}
+
+    /*Pacotes*/
+tbody tr td#check {
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(35, 211, 50);
+}
+
+tbody tr td#nocheck {
+    font-weight: 800;
+    font-size: 20px;
+    color: red;
+}
+
+ul#pacote {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+div#valoresheader{
+    margin-top: 100px;
+}
+
+div#valores{
+    margin-top: 50px;
+}
+
+div#compare{
+    margin-top: 100px;
+    margin-bottom: 250px;
+}
+h2#compareh2{
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
