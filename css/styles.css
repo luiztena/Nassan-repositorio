@@ -70,7 +70,7 @@ img#logo{
 #tituloslide2 {
     text-align: center;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
-    color: yellow;
+    color: white;
 }
 #subtituloslide{
     text-align: center;
@@ -84,7 +84,7 @@ img#logo{
 
 #subtituloslide2{
     text-align: center;
-    color: ghostwhite;
+    color: white;
     font-size: 12pt;
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
     font-weight: 700;
@@ -96,7 +96,7 @@ img#logo{
     font-size: 14pt;
     text-align: center;
     text-decoration: none;
-    color: yellow;
+    color: ghostwhite;
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -171,9 +171,7 @@ img#logo{
 
 /**Section**/ 
 #section1{
-    border-style: outset;
-    box-shadow: 5px 2px 25px rgba(0, 0, 0, 0.5);
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 #sectionconteudo h1{
     text-align: center;
@@ -218,6 +216,17 @@ text-transform: uppercase;
     color: black;
     text-decoration: none;}
 
+p#sectionP{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: justify;
+}    
+
+h2#sectiontitle{
+    text-transform: uppercase;
+    text-align: center;
+}
+
     /*Pacotes*/
 tbody tr td#check {
     font-weight: 800;
@@ -251,4 +260,38 @@ h2#compareh2{
     margin-top: 100px;
     text-transform: uppercase;
     font-weight: 400;
+}
+
+/*section da pagina valores*/ 
+ul#treinamento li{
+    font-size: 13pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-left: solid;
+    border-width: 3px;
+    border-color: rgb(248, 212, 9);
+    padding-left: 10px;
+}
+
+section#sectionvalores{
+    margin-bottom: 300px;
+}
+
+div#cardplanos{
+    height: 450px;
+}
+button#buttonplanos1{
+    margin-top: 100px;
+}
+button#buttonplanos2{
+    margin-top: 40px;
+}
+
+/*Cadastro*/
+
+h2#headertitulo{
+    text-transform: uppercase;
+}
+header#cadastrocabeçalho{
+    text-align: center;
+    margin-bottom: 100px;
 }
