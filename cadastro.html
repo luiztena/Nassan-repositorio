@@ -20,47 +20,6 @@
     <script src="js/cep.js"></script>
     <!--CEP-->
 
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script>
-        /*
-         * Para efeito de demonstração, o JavaScript foi
-         * incorporado no arquivo HTML.
-         * O ideal é que você faça em um arquivo ".js" separado. Para mais informações
-         * visite o endereço https://developer.yahoo.com/performance/rules.html#external
-         */
-
-        // Registra o evento blur do campo "cep", ou seja, a pesquisa será feita
-        // quando o usuário sair do campo "cep"
-        $("#cep").blur(function () {
-            // Remove tudo o que não é número para fazer a pesquisa
-            var cep = this.value.replace(/[^0-9]/, "");
-
-            // Validação do CEP; caso o CEP não possua 8 números, então cancela
-            // a consulta
-            if (cep.length != 8) {
-                return false;
-            }
-
-            // A url de pesquisa consiste no endereço do webservice + o cep que
-            // o usuário informou + o tipo de retorno desejado (entre "json",
-            // "jsonp", "xml", "piped" ou "querty")
-            var url = "https://viacep.com.br/ws/" + cep + "/json/";
-
-            // Faz a pesquisa do CEP, tratando o retorno com try/catch para que
-            // caso ocorra algum erro (o cep pode não existir, por exemplo) a
-            // usabilidade não seja afetada, assim o usuário pode continuar//
-            // preenchendo os campos normalmente
-            $.getJSON(url, function (dadosRetorno) {
-                try {
-                    // Preenche os campos de acordo com o retorno da pesquisa
-                    $("#endereco").val(dadosRetorno.logradouro);
-                    $("#bairro").val(dadosRetorno.bairro);
-                    $("#cidade").val(dadosRetorno.localidade);
-                    $("#uf").val(dadosRetorno.uf);
-                } catch (ex) { }
-            });
-        });
-    </script>
 
 <body>
 
@@ -107,12 +66,12 @@
                 <h3>preencha seus dados para criar sua conta no site e assim comprar o que deseja.</h3>
             </header>
             <div class="col-md-7 col-lg-8'">
-                <h4 class="text-muted">Dados</h4>
+                <h4 id="subtitulo-formulario">Dados</h4>
                 <form method="get" action="." class="needs-validation">
                     <div class="row g-5">
                         <div class="col-sm-5">
                             <label for="firstname" class="form-label">Nome completo</label>
-                            <input type="text" class="form-control" id="nome" required>
+                            <input autocomplete="off" type="text" class="form-control" id="input_nome" onchange="valida_nome()" required>
                             <div class="invalid-feedback">Por-favor coloque um nome valido, não use números
                                 ou caracteres.
                             </div>
@@ -151,7 +110,7 @@
 
                         <div class="col-sm-3">
                             <labe for="rua" class="form-label">Número da casa:
-                                <input class="form-control" name="rua" type="text" id="rua" size="2" required
+                                <input onchange="onlynumber(evt)" class="form-control" name="rua" type="number" id="rua" size="2" required
                                      /></label><br />
                         </div>
 
@@ -173,12 +132,12 @@
 
                         <div class="col-sm-5">
                             <label for="tel" class="form-label">Telefone</label>
-                            <input placeholder="(DDD) 9000-0000" type="tel" class="form-control" id="tel" required>
+                            <input onchange="" name="tel" placeholder="(DDD) 9000-0000" type="tel" class="form-control" id="tel" required>
                             <div class="invalid-feedback">digite um numero valido com seu DDD e o nove na frente
                             </div>
                         </div>
 
-                        <div class="col-sm-7">
+                        <div class="col-sm-7" id="formulariocpf">
                             <label for="email" class="form-label">CPF</label>
                             <input type="text" class="form-control" id="cpf" required>
                             <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu CPF, com
@@ -192,10 +151,10 @@
                                     e ficar por dentro dos novos produtos de segurança antifurto ?</strong>
                             </label>
                             <div class="form-check form-check-inline" required>
-                                <input class="form-check-input" type="radio" name="check" id="yes" value="opcao1">
+                                <input checked class="form-check-input" type="radio" name="check" id="yes" value="opcao1">
                                 <label class="form-check-label" for="yes">Sim</label>
                             </div>
-                            <div class="form-check form-check-inline">
+                            <div id="formulariodivfinal" class="form-check form-check-inline">
                                 <input class="form-check-input" name="check" type="radio" id="no" value="opcao2">
                                 <label class="form-check-label" for="no">Não</label>
                             </div>

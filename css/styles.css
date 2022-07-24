@@ -293,5 +293,19 @@ h2#headertitulo{
 }
 header#cadastrocabeçalho{
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+}
+
+h4#subtitulo-formulario{
+    font-size: 22px;
+    margin-bottom: 20px;
+
+}
+
+div#formulariocpf{
+    margin-bottom: 30px;
+}
+
+div#formulariodivfinal{
+    margin-bottom: 30px;
 }

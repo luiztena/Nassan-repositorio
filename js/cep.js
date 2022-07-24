@@ -64,3 +64,42 @@ function pesquisacep(valor) {
     }
 };
 
+function valida_nome() {
+    var filter_nome = /^([a-zA-Zà-úÀ-Ú]|\s+)+$/;
+    if (!filter_nome.test(document.getElementById("input_nome").value)) {
+        document.getElementById("input_nome").value = '';
+        document.getElementById("input_nome").placeholder = "Coloque um nome valido !";
+        document.getElementById("input_nome").style.borderColor = "#ff0000";
+        document.getElementById("input_nome").style.outline = "#ff0000";
+        document.getElementById("input_nome").focus();
+        document.getElementById("input_nome").onkeydown = function keydown_nome() {
+            document.getElementById("input_nome").placeholder = "";
+            document.getElementById("input_nome").style.borderColor = "#999999";
+            document.getElementById("input_nome").style.outline = null;
+        }
+        return false;
+    } 
+    return true
+    }
+
+    $(document).ready(function(){
+        $('body').on('focus', '.tel', function(){
+            var maskBehavior = function (val) {
+                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+            },
+            options = {
+                onKeyPress: function(val, e, field, options) {
+                    field.mask(maskBehavior.apply({}, arguments), options);
+    
+                    if(field[0].value.length >= 14){
+                        var val = field[0].value.replace(/\D/g, '');
+                        if(/\d\d(\d)\1{7,8}/.test(val)){
+                            field[0].value = '';
+                            alert('Telefone Invalido');
+                        }
+                    }
+                }
+            };
+            $(this).mask(maskBehavior, options);
+        });
+    });
