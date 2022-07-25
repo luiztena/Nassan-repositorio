@@ -68,7 +68,7 @@ function valida_nome() {
     var filter_nome = /^([a-zA-Zà-úÀ-Ú]|\s+)+$/;
     if (!filter_nome.test(document.getElementById("input_nome").value)) {
         document.getElementById("input_nome").value = '';
-        document.getElementById("input_nome").placeholder = "Coloque um nome valido !";
+        document.getElementById("input_nome").placeholder = "Use apenas letras !";
         document.getElementById("input_nome").style.borderColor = "#ff0000";
         document.getElementById("input_nome").style.outline = "#ff0000";
         document.getElementById("input_nome").focus();
@@ -82,6 +82,26 @@ function valida_nome() {
     return true
     }
 
+    function valida_sobrenome() {
+        var filter_nome = /^([a-zA-Zà-úÀ-Ú]|\s+)+$/;
+        if (!filter_nome.test(document.getElementById("input_sobrenome").value)) {
+            document.getElementById("input_sobrenome").value = '';
+            document.getElementById("input_sobrenome").placeholder = "Use apenas letras !";
+            document.getElementById("input_sobrenome").style.borderColor = "#ff0000";
+            document.getElementById("input_sobrenome").style.outline = "#ff0000";
+            document.getElementById("input_sobrenome").focus();
+            document.getElementById("input_sobrenome").onkeydown = function keydown_nome() {
+                document.getElementById("input_sobrenome").placeholder = "";
+                document.getElementById("input_sobrenome").style.borderColor = "#999999";
+                document.getElementById("input_sobrenome").style.outline = null;
+            }
+            return false;
+        } 
+        return true
+        }
+
+
+    
     $(document).ready(function(){
         $('body').on('focus', '.tel', function(){
             var maskBehavior = function (val) {
@@ -103,3 +123,52 @@ function valida_nome() {
             $(this).mask(maskBehavior, options);
         });
     });
+
+    function validadata(){
+        var data = document.getElementById("nascimento").value; // pega o valor do input
+        data = data.replace(/\//g, "-"); // substitui eventuais barras (ex. IE) "/" por hífen "-"
+        var data_array = data.split("-"); // quebra a data em array
+        
+        // para o IE onde será inserido no formato dd/MM/yyyy
+        if(data_array[0].length != 4){
+           data = data_array[2]+"-"+data_array[1]+"-"+data_array[0]; // remonto a data no formato yyyy/MM/dd
+        }
+        
+        // comparo as datas e calculo a idade
+        var hoje = new Date();
+        var nasc  = new Date(data);
+        var idade = hoje.getFullYear() - nasc.getFullYear();
+        var m = hoje.getMonth() - nasc.getMonth();
+        if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
+        
+        if(idade < 18){
+           alert("Pessoas menores de 18 não podem se cadastrar.");
+           document.getElementById("nascimento").value = "";
+           document.getElementById("nascimento").style.borderColor = "#ff0000";
+           document.getElementById("nascimento").style.outline = "#ff0000";
+           document.getElementById("nascimento").focus();
+           document.getElementById("nascimento").onkeydown = function keydown_nome() {
+               document.getElementById("nascimento").style.borderColor = "#999999";
+               document.getElementById("nascimento").style.outline = null;
+           }
+           return false;
+        }
+     
+        if(idade >= 18 && idade <= 100){
+           return true;
+        }
+
+        if(idade >= 100){
+            alert("Digite uma idade valida")
+            document.getElementById("nascimento").value = "";
+            document.getElementById("nascimento").style.borderColor = "#ff0000";
+            document.getElementById("nascimento").style.outline = "#ff0000";
+            document.getElementById("nascimento").focus();
+            document.getElementById("nascimento").onkeydown = function keydown_nome() {
+                document.getElementById("nascimento").style.borderColor = "#999999";
+                document.getElementById("nascimento").style.outline = null;
+            }
+            return false
+        }
+        return false;
+     }

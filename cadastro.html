@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!--CEP--->>
+    <!--CEP--->
     <script src="js/cep.js"></script>
     <!--CEP-->
 
@@ -24,9 +24,6 @@
 <body>
 
     <!--Menu-->
-
-
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
         <div class="container-fluid">
 
@@ -67,19 +64,29 @@
             </header>
             <div class="col-md-7 col-lg-8'">
                 <h4 id="subtitulo-formulario">Dados</h4>
-                <form method="get" action="." class="needs-validation">
+                <form method="post" action="/action_page.php" class="needs-validation">
                     <div class="row g-5">
                         <div class="col-sm-5">
-                            <label for="firstname" class="form-label">Nome completo</label>
-                            <input autocomplete="off" type="text" class="form-control" id="input_nome" onchange="valida_nome()" required>
+                            <label for="firstname" class="form-label">Primeiro nome</label>
+                            <input autocomplete="off" type="text" class="form-control" id="input_nome"
+                                onchange="valida_nome()" required>
                             <div class="invalid-feedback">Por-favor coloque um nome valido, não use números
                                 ou caracteres.
                             </div>
                         </div>
 
                         <div class="col-sm-7">
+                            <label for="nome" class="form-label">Ultimo nome</label>
+                            <input autocomplete="off" type="text" class="form-control" id="input_sobrenome"
+                                onchange="valida_sobrenome()" required>
+                            <div class="invalid-feedback">Por-favor, não use números ou caracteres.
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-12">
                             <label for="email" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input autocomplete="off" type="email" class="form-control" id="email" required>
                             <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
                                 ninguém.</small>
                             <div class="invalid-feedback">Por-favor digite um email valido
@@ -90,57 +97,65 @@
                         <div class="col-sm-5">
                             <label for="cep" class="form-label">Cep:
                                 <input class="form-control" name="cep" type="text" id="cep" value="" maxlength="9"
-                                     onblur="pesquisacep(this.value);" /></label><br />
-                            
+                                    onblur="pesquisacep(this.value);" /></label><br />
+
                         </div>
 
                         <div class="col-sm-7">
                             <label for="bairro" class="form-label">Bairro:
                                 <input class="form-control" name="bairro" type="text" id="bairro"
                                     required /></label><br />
-                                    <div class="invalid-feedback">
-                                    </div>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
 
                         <div class="col-sm-5">
                             <labe for="rua" class="form-label">Rua:
-                                <input class="form-control" name="rua" type="text" id="rua"
-                                     /></label><br />
+                                <input class="form-control" name="rua" type="text" id="rua" /></label><br />
                         </div>
 
                         <div class="col-sm-3">
                             <labe for="rua" class="form-label">Número da casa:
-                                <input onchange="onlynumber(evt)" class="form-control" name="rua" type="number" id="rua" size="2" required
-                                     /></label><br />
+                                <input onchange="onlynumber(evt)" class="form-control" name="rua" type="number" id="rua"
+                                    size="2" required /></label><br />
+                        </div>
+
+                        <div class="col-sm-5">
+                            <labe for="complemento" class="form-label">Complemento:<span id="opcional">(Opcional)</span>
+                                <input class="form-control" name="rua" type="text" id="complemento"
+                                    placeholder="Bloco A, numero 23" /></label><br />
                         </div>
 
                         <div class="col-sm-5">
                             <label class="form-label" for="cidade">Cidade:
-                                <input class="form-control" name="cidade" type="text" id="cidade" size="40"
-                                     /></label><br />
+                                <input class="form-control" name="cidade" type="text" id="cidade"
+                                    size="40" /></label><br />
                         </div>
 
-                        <div class="col-sm-7">
+                        <div class="col-sm-5">
                             <label for="estado" class="form-label">Estado:
-                                <input class="form-control" name="uf" type="text" id="uf" size="2"  /></label>
+                                <input class="form-control" name="uf" type="text" id="uf" /></label>
                         </div>
 
                         <div class="col-sm-5">
                             <label for="data" class="form-label">Data de nascimento:
-                                <input class="form-control" name="data" type="date" id="data" size="" required /></label>
+                                <input onmouseleave="return validadata()" class="form-control" name="data" type="date"
+                                    id="nascimento" required /></label>
                         </div>
 
                         <div class="col-sm-5">
                             <label for="tel" class="form-label">Telefone</label>
-                            <input onchange="" name="tel" placeholder="(DDD) 9000-0000" type="tel" class="form-control" id="tel" required>
-                            <div class="invalid-feedback">digite um numero valido com seu DDD e o nove na frente
+                            <input onkeypress="onlynumber();" name="tel" placeholder="(XX)9XXXXXXXX"
+                                type="number" class="form-control" id="tel" required>
+                            <div class="invalid-feedback">Digite um numero valido com seu DDD e o nove na frente
                             </div>
                         </div>
 
                         <div class="col-sm-7" id="formulariocpf">
-                            <label for="email" class="form-label">CPF</label>
-                            <input type="text" class="form-control" id="cpf" required>
-                            <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu CPF, com
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input name="cpf" type="number" placeholder="Não use pontos apenas numeros"
+                                class="form-control" id="campo_cpf" required>
+                            <small id="cpfhelp" class="form-text text-muted">Nunca vamos compartilhar seu CPF, com
                                 ninguém.</small>
                             <div class="invalid-feedback">Por-favor digite um CPF valido
                             </div>
@@ -151,7 +166,8 @@
                                     e ficar por dentro dos novos produtos de segurança antifurto ?</strong>
                             </label>
                             <div class="form-check form-check-inline" required>
-                                <input checked class="form-check-input" type="radio" name="check" id="yes" value="opcao1">
+                                <input checked class="form-check-input" type="radio" name="check" id="yes"
+                                    value="opcao1">
                                 <label class="form-check-label" for="yes">Sim</label>
                             </div>
                             <div id="formulariodivfinal" class="form-check form-check-inline">
