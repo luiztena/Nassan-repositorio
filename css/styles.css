@@ -345,3 +345,17 @@ input[type=number] {
     text-decoration: none;
     font-style: italic;
   }
+
+  /* Pagina Mapa */
+  header#mapaheader{
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  h2#headersubtitulo{
+    font-size: 16pt;
+  }
+  div#map {
+    height: 400px;
+    width: 100%;
+  }
+            
