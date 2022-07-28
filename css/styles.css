@@ -358,4 +358,68 @@ input[type=number] {
     height: 400px;
     width: 100%;
   }
-            
+/*FAQ*/
+div#faqheader{
+    text-align: center;
+}
+
+h2#subtitulofaq{
+    font-size: 28pt;
+    margin-bottom: 100px;
+}
+
+p#paragrafofaq{
+    color: black;
+    font-size: 16pt;
+}
+div#faqsection{
+    background-color: rgba(233, 230, 230, 0.404);
+    margin-top: 100px;
+    padding-bottom: 100px;
+    border-top: 5px lightslategray double;
+    border-bottom: 5px lightslategray double;
+}
+
+div#faqsectioninicio{
+    background-color: rgba(233, 230, 230, 0.404);
+    margin-top: 100px;
+    padding-bottom: 100px;
+    border-bottom: 5px lightslategray double;
+}
+
+div#faqsection3{
+    background-color: rgba(233, 230, 230, 0.404);
+    margin-top: 100px;
+    padding-bottom: 100px;
+    border-top: 5px lightslategray double;
+}
+
+div#faqsection4{
+    background-color: rgba(233, 230, 230, 0.404);
+    margin-top: 100px;
+    padding-bottom: 100px;
+    border-top: black solid 2px;
+}
+
+div#duvida{
+    margin-top: 30px;
+    text-align: center;
+    height: 550px;
+}
+label#form-label{
+    text-transform: uppercase;
+    font-size: 15pt;
+    font-weight: 500;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+textarea#duvida{
+    border: 3px solid rgba(0, 0, 0, 0.4);
+}
+input#formulariofaq{
+    border: 3px solid rgba(0, 0, 0, 0.3);
+}
+h4#duvidah4{
+    text-align: left;
+    font-size: 18pt;
+}
