@@ -41,10 +41,11 @@
 
         <ul id="ul" class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a id="menulink" href="#" class="nav-link disabled" aria-current="page" href="#">Inicio</a>
+            <a id="menulink" href="Index.html" href="#" class="nav-link text-white">Inicio</a>
           </li>
           <li class="nav-item"><a id="menulink" href="#" class="nav-link  text-white">Produtos</a></li>
-          <li class="nav-item"><a id="menulink" href="#" class="nav-link  text-white">Manutenção</a></li>
+          <li class="nav-item"><a id="menulink" class="nav-link disabled" href="#" aria-current="page">
+          Manutenção</a></li>
           <li class="nav-item"><a id="menulink" href="#" class="nav-link  text-white">Sobre</a></li>
 
         </ul>
@@ -54,29 +55,33 @@
   </nav>
 
   <header id="header-reparo">
-    <h1>Mnautenção</h1>
+    <h1>Manutenção</h1>
     <h4>Preencha os dados para que possamos entender um pouco mais de seu problema é melhor lhe ajudar. </h4>
   </header>
-<div class="d-flex gap-5 justify-content-center">
+
+  <form action="." method="get">
+<div id="divradios" class="d-flex gap-5 justify-content-center">
   <div class="list-group mx-0 w-auto">
-    <div>
+    <div id="tituloradio">
         <h4>Quais desses erros estão ocorrendo?</h4>
     </div>
 
     <label class="list-group-item d-flex gap-2">
       <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios1" value="" checked>
       <span>
-        Minha antena não está ligando nem a fonte
-        <small class="d-block text-muted">A antena não está ligando e a fonte também não.</small>
+        A fonte da minha antena não está ligando
+        <small class="d-block text-muted">A fonte não está ligando,(se a led da fonte estiver apagada
+          significa que a fonte não está funcionando)
+        </small>
       </span>
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios2" value="">
       <span>
-        A fonte da antena liga mas a antena não
+        A fonte da antena liga mas a antena não funciona
         <small class="d-block text-muted">Caso a led de sua fonte esteja acessa e sua antena 
-        não funcionando marque aqui
+        não estive funcionando corretamente marque essa opção
         </small>
       </span>
     </label>
@@ -84,51 +89,99 @@
     <label class="list-group-item d-flex gap-2">
       <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
       <span>
-        Minha a antena funciona mas fica disparando sozinha
-        <small class="d-block text-muted">Caso sua antena esteja ligando mas disparando sozinha clique aqui</small>
+        Minha antena funciona, mas fica disparando sozinha
+        <small class="d-block text-muted">Caso sua antena esteja tendo problemas de alarme falso clique aqui.</small>
       </span>
     </label>
 
     <label class="list-group-item d-flex gap-2">
         <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
         <span>
-          Minha  antena funciona, mas não não está detectando tão bem.
-          <small class="d-block text-muted">Se sua antena não está funcionando tão bem marque aqui</small>
+          Minha  antena funciona, mas não está detectando com tanta precissão.
+          <small class="d-block text-muted">Se sua antena não estiver detectando tão bem 
+            marque essa opção
+          </small>
+        </span>
+      </label>
+
+      <label class="list-group-item d-flex gap-2">
+        <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
+        <span>
+          Minha antena está funcionando, porém outro equipamento está apresentando defeito.
+          <small class="d-block text-muted">Se a antena não apresenta defeito e outro 
+            equipamento nosso precisa de reparos marque essa opção
+          </small>
         </span>
       </label>
   </div>
+</div>
 
+<div id="divradios" class="d-flex gap-5 justify-content-center">
   <div class="list-group mx-0 w-auto">
+    <div id="tituloradio">
+      <h4 style="text-align: center; padding-bottom:40px;">Marque o equipamento que estã apresentando defeito</h4>
+  </div>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios1" value="" checked>
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="">
       <span>
-        First radio
-        <small class="d-block text-muted">With support text underneath to add more detail</small>
+        Antena
+        <small class="d-block text-muted">Caso sua antena estiver com mau funcionamento
+          marque está opção.
+        </small>
       </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios2" value="">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="">
       <span>
-        Second radio
-        <small class="d-block text-muted">Some other text goes here</small>
+        Verifciador
+        <small class="d-block text-muted">Caso seu verificador não esteja funcionando 
+          corretamente marque essa opção
+        </small>
       </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="">
       <span>
-        Third radio
-        <small class="d-block text-muted">And we end with another snippet of text</small>
+        Etiquetas
+        <small class="d-block text-muted">Se suas estiquetas estão sujas, ou com baixa
+          detecção marque essa opção
+        </small>
       </span>
     </label>
   </div>
 </div>
 
-</div>
+<div>
+  <h4 id="h4reparo" class="mb-3">Digite seu nome e seu E-mail e entraremos em contato para agendar seu reparo</h4>
+  </div>
 
+  <div class="row g-3">
+    <div class="col-sm-5">
+      <label id="label-reparo" for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="input-reparo" placeholder="" value="" required>
+      <div class="invalid-feedback">
+        Coloque um nome
+      </div>
+    </div>
 
+    <div class="col-sm-5">
+      <label id="label-reparo" for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="input-reparo" placeholder="" value="" required>
+      <div class="invalid-feedback">
+        Digite um email valido
+      </div>
+    </div>
+    </div>
 
-</div>
-
+    <div class="col-sm-5">
+      <label id="comentario-label" for="comentario">Qual problema nossos equipamentos estão apresetando?</label>
+      <textarea class="form-control" id="comentario-cliente" rows="2"></textarea>
+    </div>
+    <button id="reparo-enviar" type="submit" class="btn btn-outline-dark mb-2 ml-2">Enviar</button>
+  </form>
+  <h4 id="numero-reparo">Ou se preferir você pode entrar em contato conosco através do nosso numero de suporte ao cliente:
+ <span id="tel">940028922</span>, basta ligar ou mandar mensagem!
+</h4>
 
    <!-- Footer -->
    <footer class="bg-dark text-center text-white">

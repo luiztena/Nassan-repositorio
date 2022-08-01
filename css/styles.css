@@ -418,12 +418,62 @@ textarea#duvida{
 }
 input#formulariofaq{
     border: 3px solid rgba(0, 0, 0, 0.3);
-}
-h4#duvidah4{
+}h4#duvidah4{
     text-align: left;
     font-size: 18pt;
 }
 /*reparo*/
 header#header-reparo{
     text-align: center;
+    padding-bottom: 100px;
+    margin-top: 70px;
+}
+
+div#tituloradio{
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+div#divradios{
+    padding-bottom: 130px;
+}
+label#label-reparo{
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+}
+input#input-reparo{
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+textarea#comentario-cliente{
+    margin-left: 10px;
+}
+label#comentario-label{
+    text-transform: uppercase;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+h4#h4reparo{
+    text-align: center;
+    padding-bottom: 80px;
+}
+button#reparo-enviar{
+    margin-top: 20px;
+    width: 250px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+h4#numero-reparo{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkcyan;
+}
+span#tel{
+    text-decoration: underline;
+    color: black;
 }
