@@ -45,7 +45,8 @@
                         aria-current="page" href="#">Inicio</a>
                 </li>
                     <li class="nav-item"><a id="menulink" href="#" class="nav-link  text-white">Produtos</a></li>
-                    <li class="nav-item"><a id="menulink" href="#" class="nav-link  text-white">Manutenção</a></li>
+                    <li class="nav-item"><a id="menulink" href="reparo.html" class="nav-link  text-white">
+                    Manutenção</a></li>
                     <li class="nav-item"><a id="menulink" href="#" class="nav-link  text-white">Sobre</a></li>
 
                 </ul>
@@ -59,7 +60,7 @@
         <h4>Aqui estão algumas das duvidas mais frequentes que recebemos.</h4>
     </div>
 
-    <div  id="faqsectioninicio" class="b-example-divider"></div>
+    <div  id="faqsection" class="b-example-divider"></div>
 
     <div  class="px-4 pt-5 my-5 text-center border-bottom">
         <h2 id="subtitulofaq" class="display-4 fw-bold">Qual a taxa de detecção das antenas?</h2>
@@ -124,29 +125,32 @@
     </div>
     <div  id="faqsection" class="b-example-divider"></div>
     <form>
+
     <div id="duvida">
-        <h4 id="duvidah4">Caso nao tenha achado sua duvida escreva na nossa caixa de duvidas, nos responderemos o mais rapido possivel.</h4>
-        <div class="mb-3">
-            <label id="form-label" for="exampleFormControlInput1" class="form-label">Nome</label>
-            <input id="formulariofaq" required  type="text" class="form-control" id="exampleFormControlInput1">
+        <h4 class="mb-5" id="duvidah4">Caso nao tenha achado sua duvida escreva na nossa caixa de duvidas, nos responderemos o mais rapido possivel.</h4>
+        <div class="col-sm-5 d-inline-flex justify-content-center" id="nome-duvida">
+            <label id="form-label" for="exampleFormControlInput1" class="form-label">Nome:</label>
+            <input id="formulariofaq" required  type="text" class="form-control" value="">
           </div>
-    <div class="mb-3">
-        <label id="form-label" for="exampleFormControlInput1" class="form-label">E-mail</label>
+
+    <div class="col-sm-5 d-inline-flex justify-content-center">
+        <label id="form-label" for="exampleFormControlInput1" class="form-label">E-mail:</label>
         <input id="formulariofaq" required type="email" class="form-control" id="exampleFormControlInput1">
       </div>
-      <div class="mb-3">
-        <label id="form-label" for="exampleFormControlTextarea1" class="form-label">Digite sua duvida aqui</label>
-        <textarea placeholder="Caixa de duvidas" required id="duvida" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+
+      <div class="d-flex justify-content-center"">
+        <textarea placeholder="Caixa de duvidas" required id="duvida" class="form-control d-flex justify-content-center"
+         id="duvida" rows="4"></textarea>
       </div>
 
       <div>
-        <button type="submit" class="btn btn-outline-secondary">Enviar pergunta</button>
+        <button type="submit" class="btn btn-outline-dark">Enviar pergunta</button>
       </div>
 
     </div>
 </form>
 
-    <div  id="faqsection4" class="b-example-divider"></div>
+    <div  id="faqsection" class="b-example-divider"></div>
     <!-- Footer -->
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->

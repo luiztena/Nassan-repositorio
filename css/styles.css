@@ -380,49 +380,40 @@ div#faqsection{
     border-bottom: 5px lightslategray double;
 }
 
-div#faqsectioninicio{
-    background-color: rgba(233, 230, 230, 0.404);
-    margin-top: 100px;
-    padding-bottom: 100px;
-    border-bottom: 5px lightslategray double;
-}
-
-div#faqsection3{
-    background-color: rgba(233, 230, 230, 0.404);
-    margin-top: 100px;
-    padding-bottom: 100px;
-    border-top: 5px lightslategray double;
-}
-
-div#faqsection4{
-    background-color: rgba(233, 230, 230, 0.404);
-    margin-top: 100px;
-    padding-bottom: 100px;
-    border-top: black solid 2px;
-}
 
 div#duvida{
     margin-top: 30px;
     text-align: center;
-    height: 550px;
+    height: 300px;
 }
 label#form-label{
     text-transform: uppercase;
     font-size: 15pt;
     font-weight: 500;
-    padding-top: 30px;
     padding-bottom: 30px;
+    width: 200px;
 }
-textarea#duvida{
-    border: 3px solid rgba(0, 0, 0, 0.4);
-}
-input#formulariofaq{
-    border: 3px solid rgba(0, 0, 0, 0.3);
-}h4#duvidah4{
-    text-align: left;
+h4#duvidah4{
+    text-align: center;
     font-size: 18pt;
 }
+input#formulariofaq{
+    height: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    background-color: rgb(255, 255, 230);
+    border: 3px solid rgba(0, 0, 0, 0.3);
+}
+textarea#duvida{
+    width: 600px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    margin-bottom: 30px;
+    background-color: rgb(255, 255, 230);
+    border: 3px solid rgba(0, 0, 0, 0.4);
+}
 /*reparo*/
+
 header#header-reparo{
     text-align: center;
     padding-bottom: 100px;
