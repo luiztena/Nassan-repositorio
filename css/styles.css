@@ -468,3 +468,17 @@ span#tel{
     text-decoration: underline;
     color: black;
 }
+
+img#logonassan{
+    background-color: yellow;
+}
+div#div-produto{
+    background-image: url('img/produto1.png');
+}
+small#unid{
+    color: black;
+}
+#titulo-produto{
+    color: white;
+    text-shadow: black 2px 3px 2px;
+}
