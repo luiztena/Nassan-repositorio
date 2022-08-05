@@ -482,3 +482,8 @@ small#unid{
     color: white;
     text-shadow: black 2px 3px 2px;
 }
+/*Pagina de pagamento8*/
+#pag-header{
+    text-align: center;
+    margin-bottom: 80px;
+}
